@@ -666,8 +666,63 @@
     grid-template-columns: 1fr;
   }
 
+  .card-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .three-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .skill-card,
+  .project-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .skill-card .MuiCardContent-root {
+    min-height: auto;
+    padding: 24px !important;
+    overflow: hidden;
+  }
+
+  .skill-card-header {
+    margin-bottom: 18px;
+  }
+
+  .skill-description {
+    white-space: normal;
+    overflow: visible;
+  }
+
+  .featured-skills {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .featured-skill {
+    min-height: 50px;
+    padding: 11px 14px;
+  }
+
+  .card-skill-slider {
+    margin: 18px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    mask-image: none;
+  }
+
+  .card-skill-track {
+    width: auto;
+    flex-wrap: wrap;
+    padding: 12px;
+    animation: none;
+  }
+
+  .card-skill-track span {
+    max-width: 100%;
+    white-space: normal;
   }
 }
 
@@ -708,53 +763,9 @@
     padding: 64px 0;
   }
 
-  .skill-card .MuiCardContent-root {
-    min-height: auto;
-    padding: 24px !important;
-    overflow: hidden;
-  }
-
-  .skill-card-header {
-    margin-bottom: 18px;
-  }
-
   .skill-title-block .MuiTypography-h5 {
     font-size: 22px;
     line-height: 1.28;
-  }
-
-  .skill-description {
-    white-space: normal;
-    overflow: visible;
-  }
-
-  .featured-skills {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .featured-skill {
-    min-height: 50px;
-    padding: 11px 14px;
-  }
-
-  .card-skill-slider {
-    margin: 18px 0 0;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    mask-image: none;
-  }
-
-  .card-skill-track {
-    width: auto;
-    flex-wrap: wrap;
-    padding: 12px;
-    animation: none;
-  }
-
-  .card-skill-track span {
-    max-width: 100%;
-    white-space: normal;
   }
 
   .pdf-frame-wrap {
