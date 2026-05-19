@@ -377,15 +377,15 @@ function App() {
           </Box>
 
           <Container maxWidth="lg">
-            <Box id="skills" className="section">
+            <Box id="skills" className="section skills-section">
               <MotionBox
                 initial={isMobile ? false : 'hidden'}
-                animate={isMobile ? 'visible' : undefined}
+                animate={isMobile ? { opacity: 1, y: 0, filter: 'none' } : undefined}
                 whileInView={isMobile ? undefined : 'visible'}
                 viewport={{ once: true, amount: isMobile ? 0.01 : 0.3 }}
-                variants={stagger}
+                variants={isMobile ? undefined : stagger}
               >
-                <MotionBox variants={fadeUp}>
+                <MotionBox variants={isMobile ? undefined : fadeUp}>
                   <Typography variant="overline" color="primary">
                     Engineering Stack
                   </Typography>
@@ -403,7 +403,8 @@ function App() {
                   {skillGroups.map((group, index) => (
                     <Box key={group.title}>
                       <MotionCard
-                        variants={fadeUp}
+                        variants={isMobile ? undefined : fadeUp}
+                        animate={isMobile ? { opacity: 1, y: 0, filter: 'none' } : undefined}
                         whileHover={isMobile ? undefined : { y: -10, scale: 1.015 }}
                         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
                         className="skill-card"
@@ -462,7 +463,8 @@ function App() {
 
                 <MotionBox
                   className="skills-marquee"
-                  variants={fadeUp}
+                  variants={isMobile ? undefined : fadeUp}
+                  animate={isMobile ? { opacity: 1, y: 0, filter: 'none' } : undefined}
                   aria-label="Technology skills"
                 >
                   <Box className="skills-track">

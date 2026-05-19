@@ -666,6 +666,13 @@
     grid-template-columns: 1fr;
   }
 
+  .skills-section,
+  .skills-section * {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
   .hero-section {
     min-height: auto;
     align-items: flex-start;
