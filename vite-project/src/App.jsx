@@ -18,6 +18,7 @@ import {
   Toolbar,
   Typography,
   createTheme,
+  useMediaQuery,
 } from '@mui/material'
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter'
 import CloseIcon from '@mui/icons-material/Close'
@@ -198,6 +199,7 @@ const stagger = {
 
 function App() {
   const [resumeOpen, setResumeOpen] = useState(false)
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 120,
@@ -377,9 +379,10 @@ function App() {
           <Container maxWidth="lg">
             <Box id="skills" className="section">
               <MotionBox
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
+                initial={isMobile ? false : 'hidden'}
+                animate={isMobile ? 'visible' : undefined}
+                whileInView={isMobile ? undefined : 'visible'}
+                viewport={{ once: true, amount: isMobile ? 0.01 : 0.3 }}
                 variants={stagger}
               >
                 <MotionBox variants={fadeUp}>
@@ -401,7 +404,7 @@ function App() {
                     <Box key={group.title}>
                       <MotionCard
                         variants={fadeUp}
-                        whileHover={{ y: -10, scale: 1.015 }}
+                        whileHover={isMobile ? undefined : { y: -10, scale: 1.015 }}
                         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
                         className="skill-card"
                       >
