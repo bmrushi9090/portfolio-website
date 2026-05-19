@@ -31,7 +31,7 @@ import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
 import TerminalIcon from '@mui/icons-material/Terminal'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import { motion, useScroll, useSpring } from 'framer-motion'
-import resumePdf from './assets/Rushikesh_Shelke_Frontend_Developer_Resume_.pdf'
+import resumePdf from './assets/Rushikesh_Shelke_Front-End_Developer_Resume.pdf'
 import './App.css'
 
 const theme = createTheme({
@@ -151,22 +151,28 @@ const allSkills = [...new Set(skillGroups.flatMap((group) => group.skills))]
 
 const projects = [
   {
-    title: 'Frontend Portfolio System',
+    title: 'Dealer Management System (DMS) PWA',
     description:
-      'A modern portfolio web app with animated sections, Material UI theming, PDF resume preview, and recruiter-friendly structure.',
-    tags: ['React.js', 'MUI', 'Framer Motion'],
+      'A progressive web application with appointment booking, job cards, service estimates, final inspection workflows, REST API integration, and responsive cross-device UI.',
+    tags: ['React.js', 'PWA', 'REST APIs'],
   },
   {
-    title: 'Mobile App Interface',
+    title: 'Vehicle Service Booking App',
     description:
-      'A React Native app concept focused on clean navigation, reusable screen layouts, form states, and smooth mobile interactions.',
+      'A React Native mobile app for vehicle service booking and management, including vehicle details, service history, profile flows, and responsive mobile performance.',
     tags: ['React Native', 'Mobile UI', 'API'],
   },
   {
-    title: 'Dashboard Experience',
+    title: 'E-Commerce Application',
     description:
-      'A responsive dashboard concept with reusable cards, status indicators, searchable data areas, and practical UX states.',
-    tags: ['React.js', 'Components', 'UX'],
+      'A full-stack MERN e-commerce application with authentication, cart, wishlist, product browsing, and order management features.',
+    tags: ['MERN Stack', 'Auth', 'Cart'],
+  },
+  {
+    title: 'AI ChatBot Application',
+    description:
+      'An AI-powered chatbot application built with the MERN stack and LangChain for conversational interactions and practical AI-assisted workflows.',
+    tags: ['MERN Stack', 'LangChain', 'AI'],
   },
 ]
 
