@@ -477,7 +477,7 @@ function App() {
                     Project areas I can present and grow.
                   </Typography>
                 </Box>
-                <Button variant="text" endIcon={<OpenInNewIcon />} href="https://github.com/" target="_blank">
+                <Button variant="text" endIcon={<OpenInNewIcon />} href="https://github.com/bmrushi9090" target="_blank">
                   GitHub
                 </Button>
               </Stack>
@@ -586,7 +586,7 @@ function App() {
                   >
                     Say Hello
                   </Button>
-                  <IconButton color="primary" href="https://github.com/" target="_blank" aria-label="GitHub">
+                  <IconButton color="primary" href="https://github.com/bmrushi9090" target="_blank" aria-label="GitHub">
                     <GitHubIcon />
                   </IconButton>
                   <IconButton
