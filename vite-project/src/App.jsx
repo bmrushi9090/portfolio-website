@@ -267,7 +267,12 @@ function App() {
                       </motion.div>
                     </MotionBox>
                     <MotionBox variants={fadeUp}>
-                      <Typography variant="h1" fontSize={{ xs: 38, sm: 48, md: 64 }} maxWidth={820}>
+                      <Typography
+                        variant="h1"
+                        className="hero-title"
+                        fontSize={{ xs: 34, sm: 48, md: 64 }}
+                        maxWidth={820}
+                      >
                         Designing web and mobile apps with clean React engineering.
                       </Typography>
                     </MotionBox>
@@ -381,7 +386,12 @@ function App() {
                   <Typography variant="overline" color="primary">
                     Engineering Stack
                   </Typography>
-                  <Typography variant="h2" fontSize={{ xs: 32, md: 44 }} sx={{ mb: 3 }}>
+                  <Typography
+                    variant="h2"
+                    className="section-title"
+                    fontSize={{ xs: 32, md: 44 }}
+                    sx={{ mb: 3 }}
+                  >
                     Focused skills for modern product teams.
                   </Typography>
                 </MotionBox>
@@ -414,7 +424,7 @@ function App() {
                             <Typography variant="overline">{group.eyebrow}</Typography>
                             <Typography variant="h5">{group.title}</Typography>
                           </Box>
-                          <Typography color="text.secondary" sx={{ mb: 2.5 }}>
+                          <Typography className="skill-description" color="text.secondary" sx={{ mb: 2.5 }}>
                             {group.description}
                           </Typography>
                           <Box className="featured-skills">
@@ -473,7 +483,7 @@ function App() {
                   <Typography variant="overline" color="primary">
                     Selected Work
                   </Typography>
-                  <Typography variant="h2" fontSize={{ xs: 32, md: 44 }}>
+                  <Typography variant="h2" className="section-title" fontSize={{ xs: 32, md: 44 }}>
                     Project areas I can present and grow.
                   </Typography>
                 </Box>
@@ -524,7 +534,7 @@ function App() {
                     <Typography variant="overline" color="secondary">
                       Resume
                     </Typography>
-                    <Typography variant="h3" fontSize={{ xs: 30, md: 40 }}>
+                    <Typography variant="h3" className="section-title" fontSize={{ xs: 32, md: 40 }}>
                       Preview or download my real resume PDF.
                     </Typography>
                     <Typography color="text.secondary" sx={{ mt: 2, maxWidth: 650 }}>
@@ -570,7 +580,7 @@ function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <Typography variant="h2" fontSize={{ xs: 32, md: 46 }}>
+                <Typography variant="h2" className="section-title" fontSize={{ xs: 32, md: 46 }}>
                   Let us build clean software together.
                 </Typography>
                 <Typography color="text.secondary" sx={{ mt: 2, mb: 4, maxWidth: 680 }}>

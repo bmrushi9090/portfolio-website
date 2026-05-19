@@ -57,6 +57,13 @@
   max-width: 820px;
 }
 
+.hero-title,
+.section-title {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
 .hero-actions {
   align-items: center;
 }
@@ -246,6 +253,10 @@
   gap: 24px;
 }
 
+.card-grid > * {
+  min-width: 0;
+}
+
 .three-columns {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -278,6 +289,7 @@
   display: flex;
   min-height: 330px;
   flex-direction: column;
+  min-width: 0;
 }
 
 .skill-card-header {
@@ -379,6 +391,16 @@
   font-size: 24px;
   font-weight: 850;
   line-height: 1.22;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.skill-description {
+  max-width: 100%;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .featured-skills {
@@ -406,6 +428,9 @@
   font-weight: 900;
   text-align: center;
   line-height: 1.25;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transition:
     transform 180ms ease,
@@ -651,6 +676,13 @@
     padding: 46px 0 42px;
   }
 
+  .hero-title,
+  .section-title {
+    font-size: 32px !important;
+    line-height: 1.16 !important;
+    font-weight: 800 !important;
+  }
+
   .hero-actions {
     align-items: stretch;
   }
@@ -674,6 +706,55 @@
 
   .section {
     padding: 64px 0;
+  }
+
+  .skill-card .MuiCardContent-root {
+    min-height: auto;
+    padding: 24px !important;
+    overflow: hidden;
+  }
+
+  .skill-card-header {
+    margin-bottom: 18px;
+  }
+
+  .skill-title-block .MuiTypography-h5 {
+    font-size: 22px;
+    line-height: 1.28;
+  }
+
+  .skill-description {
+    white-space: normal;
+    overflow: visible;
+  }
+
+  .featured-skills {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .featured-skill {
+    min-height: 50px;
+    padding: 11px 14px;
+  }
+
+  .card-skill-slider {
+    margin: 18px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    mask-image: none;
+  }
+
+  .card-skill-track {
+    width: auto;
+    flex-wrap: wrap;
+    padding: 12px;
+    animation: none;
+  }
+
+  .card-skill-track span {
+    max-width: 100%;
+    white-space: normal;
   }
 
   .pdf-frame-wrap {
