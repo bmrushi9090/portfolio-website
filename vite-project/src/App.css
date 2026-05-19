@@ -666,6 +666,15 @@
     grid-template-columns: 1fr;
   }
 
+  .hero-section {
+    min-height: auto;
+    align-items: flex-start;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
   .card-grid {
     width: 100%;
     max-width: 100%;
@@ -728,7 +737,7 @@
 
 @media (max-width: 600px) {
   .hero-section {
-    padding: 46px 0 42px;
+    padding: 40px 0 36px;
   }
 
   .hero-title,
