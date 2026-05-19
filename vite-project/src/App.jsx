@@ -223,17 +223,7 @@ function App() {
     }
 
     event.preventDefault()
-
-    if (isAndroid) {
-      window.location.href = `intent://co?to=${contactEmail}#Intent;scheme=googlegmail;package=com.google.android.gm;S.browser_fallback_url=${encodeURIComponent(contactMailUrl)};end`
-      return
-    }
-
-    window.location.href = `googlegmail://co?to=${contactEmail}`
-
-    window.setTimeout(() => {
-      window.location.href = contactMailUrl
-    }, 700)
+    window.location.href = contactMailUrl
   }
 
   return (
