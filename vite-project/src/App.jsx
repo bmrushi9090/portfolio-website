@@ -119,6 +119,9 @@ const theme = createTheme({
 const MotionBox = motion(Box)
 const MotionCard = motion(Card)
 
+const contactEmail = 'rushikeshshelke0009@gmail.com'
+const contactMailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${contactEmail}`
+
 const navItems = ['About', 'Skills', 'Work', 'Resume', 'Contact']
 
 const skillGroups = [
@@ -594,7 +597,10 @@ function App() {
                 </Typography>
                 <Stack direction="row" spacing={1.5} alignItems="center" flexWrap="wrap">
                   <Button
-                    href="mailto:hello@example.com"
+                    component="a"
+                    href={contactMailUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     variant="contained"
                     size="large"
                     startIcon={<EmailIcon />}
