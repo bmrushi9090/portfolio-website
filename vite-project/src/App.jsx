@@ -120,7 +120,8 @@ const MotionBox = motion(Box)
 const MotionCard = motion(Card)
 
 const contactEmail = 'rushikeshshelke0009@gmail.com'
-const contactMailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${contactEmail}`
+const contactMailUrl = `mailto:${contactEmail}`
+const contactGmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${contactEmail}`
 
 const navItems = ['About', 'Skills', 'Work', 'Resume', 'Contact']
 
@@ -209,6 +210,31 @@ function App() {
     damping: 24,
     restDelta: 0.001,
   })
+
+  const openMailApp = (event) => {
+    const userAgent = navigator.userAgent || ''
+    const isAndroid = /Android/i.test(userAgent)
+    const isIOS = /iPhone|iPad|iPod/i.test(userAgent)
+
+    if (!isAndroid && !isIOS) {
+      event.preventDefault()
+      window.open(contactGmailUrl, '_blank', 'noopener,noreferrer')
+      return
+    }
+
+    event.preventDefault()
+
+    if (isAndroid) {
+      window.location.href = `intent://co?to=${contactEmail}#Intent;scheme=googlegmail;package=com.google.android.gm;S.browser_fallback_url=${encodeURIComponent(contactMailUrl)};end`
+      return
+    }
+
+    window.location.href = `googlegmail://co?to=${contactEmail}`
+
+    window.setTimeout(() => {
+      window.location.href = contactMailUrl
+    }, 700)
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -598,9 +624,10 @@ function App() {
                 <Stack direction="row" spacing={1.5} alignItems="center" flexWrap="wrap">
                   <Button
                     component="a"
-                    href={contactMailUrl}
+                    href={contactGmailUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={openMailApp}
                     variant="contained"
                     size="large"
                     startIcon={<EmailIcon />}
