@@ -370,8 +370,9 @@ function App() {
                         {`const stack = [
   'React.js',
   'React Native',
-  'Material UI',
-  'Framer Motion'
+  'JavaScript',
+  'Redux Toolkit',
+  'Material UI'
 ]`}
                       </Typography>
                     </motion.div>
@@ -559,11 +560,12 @@ function App() {
                       Resume
                     </Typography>
                     <Typography variant="h3" className="section-title" fontSize={{ xs: 32, md: 40 }}>
-                      Preview or download my real resume PDF.
+                      Preview or download my resume.
                     </Typography>
                     <Typography color="text.secondary" sx={{ mt: 2, maxWidth: 650 }}>
-                      The portfolio now uses the PDF from your assets folder, so recruiters can
-                      preview it without leaving the site or download it directly.
+                      Preview my latest resume to explore my professional experience, technical
+                      skills, and project work. You can view the PDF directly on the portfolio or
+                      download it for offline reference.
                     </Typography>
                   </MotionBox>
                 </Box>
